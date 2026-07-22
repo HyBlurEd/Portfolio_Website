@@ -4,7 +4,7 @@ title: ENDSTATION
 permalink: /projects/endstation/index.html
 tagline: "Classic Dice-Gambling Game in a grungy subway."
 description: "Win dice, upgrade your set, and create synergies. My first fully released solo project — a dice roguelike adaptation of 10,000 / Farkel with PS-X style visuals."
-hero: /assets/images/endstation-library_hero.png
+hero: /assets/images/endstation-library_hero_withText.png
 role: Solo Developer
 year: 2025–2026
 status: Released
