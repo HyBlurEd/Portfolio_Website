@@ -8,7 +8,7 @@ description: "Portfolio of Balduin Allroggen — game designer, solo developer, 
 <section class="home-hero">
   <div>
     <h1 class="home-hero__title">Game design,<br>solo <em>developed</em>.</h1>
-    <p class="home-hero__sub">I'm Balduin — a Cologne-based game designer, creative, and 3D/2D artist. I like to play and create games.</p>
+    <p class="home-hero__sub">I'm Balduin — a Cologne-based game designer, creative, and 3D artist. I like to play and make games.</p>
   </div>
   <div class="home-hero__art">
     <img src="/assets/images/home-Balduin_Lustig_02.png" alt="Portrait of Balduin" width="400" height="400">
@@ -29,7 +29,7 @@ description: "Portfolio of Balduin Allroggen — game designer, solo developer, 
 <h2 class="section-title">My Games</h2>
 <section class="game-grid">
   <a class="game-card" href="/projects/endstation/">
-    <div class="game-card__art"><img src="/assets/images/endstation-library_hero.png" alt="ENDSTATION" loading="lazy"></div>
+    <div class="game-card__art"><img src="/assets/images/endstation-library_hero_withText.png" alt="ENDSTATION" loading="lazy"></div>
     <div class="game-card__body">
       <span class="game-card__tag">Released · Steam</span>
       <h3 class="game-card__title">ENDSTATION</h3>
