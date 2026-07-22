@@ -1,0 +1,15 @@
+{
+  "name": "balduin-portfolio",
+  "version": "2.0.0",
+  "description": "Balduin's Game Design Portfolio \u2014 rebuilt from Squarespace to Eleventy",
+  "scripts": {
+      "start": "eleventy --serve",
+      "build": "eleventy",
+      "clean": "rm -rf _site"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

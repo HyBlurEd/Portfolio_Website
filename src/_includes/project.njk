@@ -1,0 +1,61 @@
+---
+layout: base
+---
+<article class="project">
+
+  <header class="project-hero">
+    <h1 class="project-hero__title">{{ title }}</h1>
+    {%- if tagline %}
+    <p class="project-hero__tagline">{{ tagline }}</p>
+    {%- endif %}
+    {%- if hero %}
+    <img class="project-hero__cover" src="{{ hero }}" alt="{{ title }} cover art">
+    {%- endif %}
+    {%- if description %}
+    <p class="project-hero__desc">{{ description }}</p>
+    {%- endif %}
+
+    {%- if year or status or engine or platform or role %}
+    <dl class="project-meta">
+      {%- if role %}<div><dt>Role</dt><dd>{{ role }}</dd></div>{%- endif %}
+      {%- if year %}<div><dt>Year</dt><dd>{{ year }}</dd></div>{%- endif %}
+      {%- if status %}<div><dt>Status</dt><dd>{{ status }}</dd></div>{%- endif %}
+      {%- if engine %}<div><dt>Engine</dt><dd>{{ engine }}</dd></div>{%- endif %}
+      {%- if platform %}<div><dt>Platform</dt><dd>{{ platform }}</dd></div>{%- endif %}
+    </dl>
+    {%- endif %}
+
+    {%- if cta and cta.length %}
+    <div class="project-ctas">
+      {%- for c in cta %}
+      <a class="btn{% if loop.first %} btn--primary{% endif %}" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.label }}</a>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </header>
+
+  <section class="project-content">
+    {{ content | safe }}
+  </section>
+
+  {%- if gallery and gallery.length %}
+  <section class="project-gallery" aria-label="Screenshots">
+    {%- for img in gallery %}
+    <img src="{{ img.src }}" alt="{{ img.alt or '' }}" loading="lazy">
+    {%- endfor %}
+  </section>
+  {%- endif %}
+
+  {%- set navLinks = [] %}
+  {%- for p in site.navProjects %}
+    {%- if p.url == page.url %}
+      {%- set prev = site.navProjects[loop.index0 - 1] if loop.index0 > 0 else site.navProjects[site.navProjects | length - 1] %}
+      {%- set next = site.navProjects[loop.index0 + 1] if loop.index0 < (site.navProjects | length - 1) else site.navProjects[0] %}
+    {%- endif %}
+  {%- endfor %}
+  <nav class="project-nav" aria-label="Project navigation">
+    {%- if prev %}<a href="{{ prev.url }}">← {{ prev.label }}</a>{%- else %}<span></span>{%- endif %}
+    {%- if next %}<a href="{{ next.url }}">{{ next.label }} →</a>{%- endif %}
+  </nav>
+
+</article>

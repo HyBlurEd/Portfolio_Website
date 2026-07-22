@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a href="mailto:{{ site.email }}" class="site-footer__email">{{ site.email }}</a>
+    <ul class="site-footer__social">
+      {%- for name, url in site.social %}
+        <li><a href="{{ url }}" rel="me noopener" target="_blank">{{ name | capitalize }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p class="site-footer__copy">© 2026 {{ site.author }} · Built with Eleventy</p>
+  </div>
+</footer>
